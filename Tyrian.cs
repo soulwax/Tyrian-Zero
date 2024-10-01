@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Tyrian_Zero
 {
+
     public class Tyrian : Game
     {
         private GraphicsDeviceManager _graphics;
@@ -12,30 +13,26 @@ namespace Tyrian_Zero
         public Tyrian()
         {
             _graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-            IsMouseVisible = true;
+            Content.RootDirectory = "Assets";
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
+            _graphics.PreferredBackBufferWidth = 800;
+            _graphics.PreferredBackBufferHeight = 600;
+            _graphics.ApplyChanges();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
-            // TODO: Add your update logic here
 
             base.Update(gameTime);
         }
@@ -44,7 +41,9 @@ namespace Tyrian_Zero
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+            // Draw your game objects here
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }

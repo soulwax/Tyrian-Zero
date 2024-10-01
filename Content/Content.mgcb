@@ -13,3 +13,15 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin planet_spaceship_alpha_256x256.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:planet_spaceship_alpha_256x256.png
+
